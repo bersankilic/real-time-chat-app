@@ -1,0 +1,42 @@
+version: "3.8"
+services:
+  postgresdb:
+    image: postgres
+    container_name: chatapp_db
+    environment: # postgre için ortam değişkenleri
+      POSTGRES_DB: chat_app
+      POSTGRES_USER:
+      POSTGRES_PASSWORD:
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # init.sql dosyasını veritabanı başlatma sırasında çalıştırmak için bağlar
+    ports:
+      - "5432:5432" # postgre için port yönlendirmesi
+
+  springboot-app:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    depends_on:
+      - postgresdb # spring boot / server uygulaması postgresql veritabanı başlatıldıktan sonra başlatılır
+    environment:
+      SPRING_APPLICATION_JSON: >
+        {
+          "spring.datasource.url": "jdbc:postgresql://postgresdb:5432/chat_app",
+          "spring.datasource.username": "",
+          "spring.datasource.password": "",
+          "spring.datasource.driver-class-name": "org.postgresql.Driver",
+          "spring.jpa.hibernate.ddl-auto": "update",
+          "spring.jpa.properties.hibernate.dialect": "org.hibernate.dialect.PostgreSQLDialect",
+          "spring.jpa.show-sql": "true"
+        }
+    ports:
+      - "8080:8080" # server için port yönlendirmesi
+
+  react-client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # React için port yönlendirmesi
+    depends_on:
+      - springboot-app # React Spring Boot ayağa kalktıktan sonra başlatılacak

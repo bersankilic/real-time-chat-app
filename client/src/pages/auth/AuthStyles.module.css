@@ -1,0 +1,53 @@
+.title {
+  font-family: Greycliff CF, var(--mantine-font-family);
+  font-weight: 900;
+}
+.loginContainer {
+  height: 50%;
+  width: 33%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.registerContainer {
+  height: 50%;
+  min-width: 25%;
+  max-width: 35%;
+}
+.registerForm {
+  padding-top: 12vh;
+}
+.loginForm {
+  padding-top: 7%;
+}
+
+@media (min-width: 1500px) {
+  .registerContainer {
+    max-width: 27%;
+  }
+}
+@media (max-width: 575px) {
+  .loginContainer {
+    width: 70%;
+  }
+
+  .registerContainer {
+    min-width: 75%;
+  }
+  .loginForm {
+    padding-top: 15%;
+  }
+}
+
+@media (max-width: 800px) {
+  .loginContainer {
+    width: 60%;
+  }
+
+  .registerContainer {
+    min-width: 65%;
+  }
+  .loginForm {
+    padding-top: 15%;
+  }
+}

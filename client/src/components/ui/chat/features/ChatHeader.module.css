@@ -1,0 +1,13 @@
+.headContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.innerContainer {
+  display: flex;
+  align-items: center;
+}
+
+.chatIcon {
+  cursor: pointer;
+}

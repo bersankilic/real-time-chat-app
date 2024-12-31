@@ -1,0 +1,67 @@
+.cardRow {
+  width: 40vw;
+}
+.rowImg {
+  height: 10%;
+  width: 10%;
+}
+.statusText {
+  margin-right: 2%;
+}
+
+.addButton {
+  width: 8vw;
+}
+.friendName {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 2%;
+  margin-right: 0.5%;
+}
+@media (min-width: 840px) and (max-width: 1050px) {
+  .addButton {
+    width: 10vw;
+  }
+
+  .statusText {
+    margin-right: 1%;
+  }
+  .cardRow {
+    width: 50vw;
+  }
+}
+@media (max-width: 839px) {
+  .addButton {
+    font-size: 1.35vh;
+    width: 11vw;
+    padding: 0 0;
+  }
+
+  .statusText {
+    font-size: 1.5vh;
+    margin-right: 0.25%;
+  }
+  .cardRow {
+    width: 55vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .reqStatus {
+    margin-left: 10%;
+  }
+  .addButton {
+    width: 20vw;
+    margin-left: 3%;
+  }
+  .cardRow {
+    width: 95vw;
+  }
+  .friendName {
+    flex-grow: 0;
+  }
+  .statusText {
+    margin-left: 1.5%;
+  }
+}

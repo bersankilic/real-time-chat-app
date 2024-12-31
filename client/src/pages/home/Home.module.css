@@ -1,0 +1,28 @@
+.homeContainer {
+  padding-top: calc(7.5vh + 6px);
+}
+.mainContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.friendsHeaderContainer {
+  margin: 0 auto;
+}
+
+.burger {
+  padding-top: 3%;
+}
+
+.sideBarContainer {
+  width: 100%;
+}
+.chatContainer {
+  height: 100%;
+  width: 66.66%;
+}
+
+@media (max-width: 1000px) {
+  .homeContainer {
+    padding-top: calc(5.5% + 6px);
+  }
+}

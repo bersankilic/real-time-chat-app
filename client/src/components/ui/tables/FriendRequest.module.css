@@ -1,0 +1,51 @@
+.requestImg {
+  height: 10%;
+  width: 10%;
+}
+
+.buttonsContainer {
+  display: flex;
+}
+
+.userTd {
+  width: 50%;
+}
+.dateTd {
+  width: 20%;
+}
+
+.optionsTd {
+  width: 30%;
+}
+.requestsButton {
+  font-size: 1.7vh;
+  margin-left: 2%;
+}
+.requesterName {
+  flex-grow: 1;
+}
+@media (min-width: 576px) and (max-width: 1150px) {
+  .userTd {
+    width: 20%;
+  }
+  .dateTd {
+    width: 15%;
+  }
+
+  .optionsTd {
+    width: 35%;
+  }
+  .requestsButton {
+    margin-left: 0.5%;
+    font-size: 1.5vh;
+  }
+}
+@media (max-width: 575px) {
+  .requesterName {
+    font-size: small;
+  }
+  .requestsButton {
+    font-size: 1.4vh;
+    margin-left: 0;
+  }
+}

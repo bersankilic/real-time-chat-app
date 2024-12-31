@@ -1,0 +1,68 @@
+.searchBar {
+  -webkit-tap-highlight-color: transparent;
+  appearance: none;
+  background-color: var(--_input-bg);
+  border: calc(0.0625rem * var(--mantine-scale)) solid var(--_input-bd);
+  border-radius: var(--_input-radius);
+  color: var(--_input-color);
+  cursor: var(--_input-cursor);
+  display: block;
+  font-family: var(--_input-font-family, var(--mantine-font-family));
+  font-size: var(--_input-fz, var(--input-fz, var(--mantine-font-size-sm)));
+  height: var(--_input-size);
+  line-height: var(--_input-line-height);
+  min-height: var(--_input-height);
+  overflow: var(--_input-overflow);
+  padding: var(--input-padding-y, 0) var(--_input-padding-right)
+    var(--input-padding-y, 0) var(--_input-padding-left);
+  resize: none;
+  text-align: var(--_input-text-align);
+  transition: border-color 0.1s ease;
+  width: 100%;
+}
+
+.friendsDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+}
+
+.scroller {
+  height: 75vh;
+  width: 45vw;
+}
+
+.mobileCard {
+  border-radius: 8px;
+  border: 1px solid #15aabf;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+@media (max-width: 950px) {
+  .friendsDiv {
+    width: 50vw;
+  }
+  .scroller {
+    width: 55vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .mobileCard {
+    height: 88vh;
+    width: 100%;
+    border-radius: 0;
+  }
+  .scroller {
+    height: 88vh;
+  }
+}
+@media (max-width: 400px) {
+  .mobileCard {
+    height: 87.3vh;
+  }
+}

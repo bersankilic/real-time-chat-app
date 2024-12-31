@@ -1,0 +1,107 @@
+.userHeader {
+  display: flex;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  align-content: center;
+  align-items: center;
+}
+
+.sideBar {
+  width: 33.33%;
+  border: 1px solid #15aabf;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.sideScroller {
+  height: 91vh;
+}
+.sideDrawer {
+  height: 91vh;
+}
+
+.userScroller {
+  height: 150px;
+}
+
+.searchCode {
+  font-weight: 700;
+  font-size: rem(10px);
+  background-color: light-dark(
+    var(--mantine-color-gray-0),
+    var(--mantine-color-dark-7)
+  );
+  border: rem(1px) solid
+    light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-7));
+}
+
+.navbarMain {
+  flex: 1;
+}
+
+.header {
+  padding-bottom: var(--mantine-spacing-md);
+  margin-bottom: calc(var(--mantine-spacing-md) * 1.5);
+  border-bottom: rem(1px) solid var(--mantine-color-blue-7);
+}
+
+.footer {
+  padding-top: var(--mantine-spacing-md);
+  margin-top: var(--mantine-spacing-md);
+  border-top: rem(1px) solid var(--mantine-color-blue-7);
+}
+
+.version {
+  background-color: var(--mantine-color-blue-7);
+  color: var(--mantine-color-white);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: var(--mantine-font-size-sm);
+  color: #15aabf;
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+  border-radius: var(--mantine-radius-sm);
+  font-weight: 500;
+
+  @mixin hover {
+    background-color: var(--mantine-color-blue-7);
+    color: var(--mantine-color-white);
+  }
+  .linkIcon {
+    color: #15aabf;
+  }
+
+  &[data-active] {
+    &,
+    &:hover {
+      box-shadow: var(--mantine-shadow-sm);
+      background-color: var(--mantine-color-gray-2);
+
+      .linkIcon {
+        color: var(--mantine-color-blue-filled);
+      }
+    }
+  }
+}
+
+.linkIcon {
+  color: var(--mantine-color-blue-1);
+  margin-right: var(--mantine-spacing-sm);
+  width: rem(25px);
+  height: rem(25px);
+}
+
+@media (min-width: 895px) and (max-width: 1000px) {
+  .sideScroller {
+    height: 93.6vh;
+  }
+}
+
+@media (min-width: 575px) and (max-width: 895px) {
+  .sideScroller {
+    height: 93vh;
+  }
+}
